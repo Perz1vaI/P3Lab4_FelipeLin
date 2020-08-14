@@ -23,7 +23,6 @@ class Juego
 public:
     static void Jugar(int cant_jugadores)
     {
-        bool Game_Ready = false;
         vector<Jugador> jugadores;
         char *baraja[52] = {"A|<>", "2|<>", "3|<>", "4|<>", "5|<>", "6|<>", "7|<>", "8|<>", "9|<>", "10|<>", "J|<>", "Q|<>", "K|<>",
                             "A|<3", "2|<3", "3|<3", "4|<3", "5|<3", "6|<3", "7|<3", "8|<3", "9|<3", "10|<3", "J|<3", "Q|<3", "K|<3",
@@ -41,7 +40,6 @@ public:
                     cin >> nombre;
                     Jugador new_player(nombre, 0);
                     jugadores.push_back(new_player);
-                    Game_Ready = true;
                 }
                 else
                 {
@@ -51,24 +49,10 @@ public:
                     jugadores.push_back(new_player);
                 }
             }
-        }else{
-            cout << "No puede jugar con menos de un jugador!" << endl;
         }
-
-        while (Game_Ready == true)
-        {
-            
-            
-        }
-        
-
-
     }
 };
 int main()
 {
-    int cant_jugadores;
-    cout << "Ingrese la cantidad de jugadores: ";
-    cin >> cant_jugadores;
-    Juego::Jugar(cant_jugadores);
+    Juego::Jugar();
 }
