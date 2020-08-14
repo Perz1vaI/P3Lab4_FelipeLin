@@ -64,17 +64,17 @@ public:
             {
                 for (int i = 0; i < 3; i++)
                 {
-                    //random_number = rand % 52;
-                    //if (baraja[random_number] == "NA")
-                    //{
+                    random_number = rando % 52;
+                    if (baraja[random_number] == "NA")
+                    {
 
-                   //     x.mano.push_back(baraja[random_number + 1]);
-                    //}
-                   // else
-                    //{
-                        //x.mano.push_back(baraja[random_number]);
-                        //baraja[random_number] = "NA";
-                    //}
+                        x.mano.push_back(baraja[random_number + 1]);
+                    }
+                    else
+                    {
+                        x.mano.push_back(baraja[random_number]);
+                        baraja[random_number] = "NA";
+                    }
                 }
             }
         }
